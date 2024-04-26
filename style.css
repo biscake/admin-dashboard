@@ -8,7 +8,7 @@ body {
 
 .main-container {
     display: grid;
-    grid-template-columns: 1fr min-content;
+    grid-template-columns: min-content 1fr;
     height: 100vh;
     grid-template-rows: 1fr 5fr;
 }
@@ -85,7 +85,8 @@ a {
     background-color: white;
     display: grid;
     /* grid-template-columns: 2fr 1fr; */
-    grid-template-columns: minmax(calc(75vw * 0.7), 2fr) minmax(calc(75vw * 0.3),1fr);
+    /* grid-template-columns: minmax(calc(75vw * 0.7), 2fr) minmax(calc(75vw * 0.3),1fr); */
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 2fr;
     padding: 10px 4vw 0 3vw;
 }
@@ -107,12 +108,12 @@ a {
 
 .search-img {
     content: url("assets/search.svg");
-    width: 1rem;
+    width: 2.5vw;
 }
 
 .search-bar input {
     width: 97%;
-    height: 60%;
+    height: 90%;
     background-color: rgb(163, 162, 162);
     align-self: center;
     justify-self: end;
@@ -127,7 +128,7 @@ a {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    font-size: clamp(0.6rem, 2vw, 0.75rem);
+    font-size: clamp(0.8rem, 2vw, 1.3rem);
     gap: 20px;
     margin-right: 15px;
     font-weight: 700;
@@ -141,8 +142,8 @@ a {
 }
 
 .profile-img {
-    width: clamp(1rem, 0.8239rem + 0.7512vw, 1.5rem);
-    height: clamp(1rem, 0.8239rem + 0.7512vw, 1.5rem);
+    width: 24px;
+    height: auto;
     background-color: grey;
     border-radius: 50%;
     aspect-ratio: 1/1;
@@ -150,16 +151,17 @@ a {
 
 .bottom-left {
     display: grid;
-    grid-template-rows: 1.3fr 2fr;
+    grid-template-rows: repeat(2, 1fr);
     grid-template-columns: min-content 4fr;
     column-gap: 8px;
-    font-size: calc(100% / 75);
+    font-size: 3vw;
     font-weight: 600;
     text-wrap: nowrap;
+    margin-bottom: 10px;
 }
 
 .bottom-left .profile-img {
-    width: 1.8rem;
+    width: 4vw;
     height: auto;
     grid-row: 1 / -1;
     align-self: center;
@@ -186,6 +188,8 @@ a {
     font-family: "Nunito Sans";
     padding: 0 8px;
     box-sizing: border-box;
+    font-size: 1rem;
+    margin-bottom: 5px;
 }
 
 .projects {
