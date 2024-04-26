@@ -89,12 +89,19 @@ a {
     padding: 10px 4vw 0 3vw;
 }
 
+.top {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+}
+
 .search-bar {
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: min-content;
     align-items: center;
     gap: 10px;
+    flex: 1;
 }
 
 .search-img {
@@ -128,7 +135,7 @@ a {
 
 .bell-img {
     content: url("assets/bell.svg");
-    width: clamp(12px, 2.5vw, 24px);
+    width: 1rem;
     margin-left: 10px;
 }
 
