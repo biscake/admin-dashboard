@@ -8,7 +8,7 @@ body {
 
 .main-container {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr min-content;
     height: 100vh;
     grid-template-rows: 1fr 5fr;
 }
@@ -84,7 +84,8 @@ a {
 .nav {
     background-color: white;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    /* grid-template-columns: 2fr 1fr; */
+    grid-template-columns: minmax(calc(75vw * 0.7), 2fr) minmax(calc(75vw * 0.3),1fr);
     grid-template-rows: 1fr 2fr;
     padding: 10px 4vw 0 3vw;
 }
@@ -152,7 +153,7 @@ a {
     grid-template-rows: 1.3fr 2fr;
     grid-template-columns: min-content 4fr;
     column-gap: 8px;
-    font-size: 1rem;
+    font-size: calc(100% / 75);
     font-weight: 600;
     text-wrap: nowrap;
 }
@@ -167,6 +168,24 @@ a {
 .greeting {
     font-size: 75%;
     align-self: end;
+}
+
+.bottom-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tools {
+    background-color: var(--blue);
+    border-radius: 16px;
+    border: 0;
+    color: white;
+    font-family: "Nunito Sans";
+    padding: 0 8px;
+    box-sizing: border-box;
 }
 
 .projects {
